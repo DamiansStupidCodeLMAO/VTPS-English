@@ -21,10 +21,10 @@ public class ActionBar {
 
         if (isEnabled) {
             stopActionBarUpdates(player);
-            player.sendSystemMessage(Component.literal("ActionBar TPS ").append(Component.literal("выключен").withStyle(ChatFormatting.RED)));
+            player.sendSystemMessage(Component.literal("ActionBar TPS ").append(Component.literal("Disabled").withStyle(ChatFormatting.RED)));
         } else {
             startActionBarUpdates(player);
-            player.sendSystemMessage(Component.literal("ActionBar TPS ").append(Component.literal("включен").withStyle(ChatFormatting.GREEN)));
+            player.sendSystemMessage(Component.literal("ActionBar TPS ").append(Component.literal("Enabled").withStyle(ChatFormatting.GREEN)));
         }
 
         playerActionBarStates.put(playerId, !isEnabled);

@@ -20,10 +20,10 @@ public class BossBarTPS {
 
         if (isEnabled) {
             stopBossBarUpdates(player);
-            player.sendSystemMessage(Component.literal("BossBar TPS ").append(Component.literal("выключен").withStyle(ChatFormatting.RED)));
+            player.sendSystemMessage(Component.literal("BossBar TPS ").append(Component.literal("Disabled").withStyle(ChatFormatting.RED)));
         } else {
             startBossBarUpdates(player);
-            player.sendSystemMessage(Component.literal("BossBar TPS ").append(Component.literal("включен").withStyle(ChatFormatting.GREEN)));
+            player.sendSystemMessage(Component.literal("BossBar TPS ").append(Component.literal("Enabled").withStyle(ChatFormatting.GREEN)));
         }
 
         playerBossBarStates.put(playerId, !isEnabled);

@@ -9,7 +9,7 @@ public class TPS {
 
         builder.append(String.format("%-15s", "TPS:"))
                 .append(String.format("%-15s", "MSPT:"))
-                .append(String.format("%-20s", "Ресурсы:"))
+                .append(String.format("%-20s", "Resources:"))
                 .append("\n");
 
         double tps5s = getAverage(VTPS.tps5s);
@@ -38,7 +38,7 @@ public class TPS {
         builder.append("└─ 15m: ").append(String.format("%-" + max + "s", s15))
                 .append("  └─ 15m: ").append(String.format("%-10.2f", getAverage(VTPS.mspt15m))).append("\n");
 
-        builder.append("\nИспользовано: ").append(VTPS.getRamUsageFormatted()).append("\n");
+        builder.append("\nUsed: ").append(VTPS.getRamUsageFormatted()).append("\n");
 
         return builder.toString();
     }

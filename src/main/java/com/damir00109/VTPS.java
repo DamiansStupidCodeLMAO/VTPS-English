@@ -136,8 +136,9 @@ public class VTPS implements ModInitializer {
 								.executes(ctx -> {
 									ServerPlayer player = ctx.getSource().getPlayer();
 									if (player != null) {
-										player.sendSystemMessage(Component.literal("Автор мода: ").append(Component.literal("damir00109").withStyle(ChatFormatting.GOLD)));
-										player.sendSystemMessage(Component.literal("Спасибо за использование мода!").withStyle(ChatFormatting.GREEN));
+										player.sendSystemMessage(Component.literal("Mod Developer: ").append(Component.literal("damir00109").withStyle(ChatFormatting.GOLD)));
+										player.sendSystemMessage(Component.literal("Thank you for using the mod!").withStyle(ChatFormatting.GREEN));
+										player.sendSystemMessage(Component.literal("Translated to English by: ").append(Component.literal("Damienne").withStyle(ChatFormatting.LIGHT_PURPLE)));
 									}
 									return 1;
 								})
@@ -190,7 +191,7 @@ public class VTPS implements ModInitializer {
 				literal("tps-actionbar")
 						.requires(VTPS::isOp)
 						.executes(ctx -> {
-							ctx.getSource().sendSystemMessage(Component.literal("Команда /tps-actionbar ").append(Component.literal("устарела").withStyle(ChatFormatting.YELLOW)).append(Component.literal(". Используйте /vtps actionbar")));
+							ctx.getSource().sendSystemMessage(Component.literal("Command /tps-actionbar is ").append(Component.literal("outdated").withStyle(ChatFormatting.YELLOW)).append(Component.literal(". Instead, use /vtps actionbar")));
 							ServerPlayer p = ctx.getSource().getPlayer();
 							if (p != null) ActionBar.toggleActionBar(p);
 							return 1;
@@ -202,7 +203,7 @@ public class VTPS implements ModInitializer {
 				literal("tabtps")
 						.requires(VTPS::isOp)
 						.executes(ctx -> {
-							ctx.getSource().sendSystemMessage(Component.literal("Команда /tabtps ").append(Component.literal("устарела").withStyle(ChatFormatting.YELLOW)).append(Component.literal(". Используйте /vtps bossbar")));
+							ctx.getSource().sendSystemMessage(Component.literal("Command /tabtps is ").append(Component.literal("outdated").withStyle(ChatFormatting.YELLOW)).append(Component.literal(". Instead, use /vtps bossbar")));
 							ServerPlayer p = ctx.getSource().getPlayer();
 							if (p != null) BossBarTPS.toggleBossBar(p);
 							return 1;
